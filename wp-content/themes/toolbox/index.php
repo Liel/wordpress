@@ -9,7 +9,7 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package Toolbox
- * @since Toolbox 0.1 sasiel checkkkk
+ * @since Toolbox 0.1 
  */
 
 get_header(); ?>
