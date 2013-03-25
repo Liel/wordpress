@@ -15,6 +15,39 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /* =Structure
 -------------------------------------------------------------- */
+BODY {
+font-family: tahoma;
+font-weight: normal;
+}
+
+a:click{
+color: green;
+}
+
+	@-webkit-keyframes spaceboots {
+	0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+	10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+	20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+	30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+	40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+	50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+	60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+	70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+	80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+	90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+	100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
+}
+.shake:hover,
+.shake:focus {
+	-webkit-animation-name: spaceboots;
+	-webkit-animation-duration: 0.8s;
+	-webkit-transform-origin:50% 50%;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+.shake {
+	display:inline-block
+}
 
 #page {
 	display: block;
@@ -23,11 +56,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 #primary {
 	float: left;
 	margin: 0 -240px 0 0;
+	background-color: #063e61;
 	width: 100%;
 }
 #content {
 	margin: 0 280px 0 0;
-}
+	
+	}
 #main .widget-area {
 	float: right;
 	overflow: hidden;
@@ -37,6 +72,20 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	clear: both;
 	display: block;
 	width: 100%;
+}
+
+.get_post {
+color: white;
+}
+
+.get_post A{
+color: white;
+text-decoration: none;
+}
+
+.meta {
+font-weight: bold;
+font-size: 8pt;
 }
 
 /* Increase the size of the content area for templates without sidebars */
@@ -85,7 +134,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	margin: 0 0 1em;
 }
 
-
+.logo {
+background-color: #002c48;
+}
 /* =Menu
 -------------------------------------------------------------- */
 

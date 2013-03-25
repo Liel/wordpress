@@ -22,16 +22,21 @@ get_header(); ?>
 				<?php toolbox_content_nav( 'nav-above' ); ?>
 
 				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
-
-					<?php
-						/* Include the Post-Format-specific template for the content.
-						 * If you want to overload this in a child theme then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'content', get_post_format() );
-					?>
-
+				<?php while ( have_posts() ) : the_post();
+				$id = get_the_ID();
+				?>
+				<div class="get_post">
+				
+				<a class="shake" href="?p=<?php echo $id ?>">
+				<h2><img src="http://www.alohastone.com/hawaiifm/play.png" style="width: 25px; vertical-align: middle;" /> <?php the_title() ?></h2>	
+				</a>
+				<span class="meta">
+				<?php 
+				echo "by ".get_the_author().", ";
+				echo the_date(); ?>
+				</span></div>
+				<?php echo the_content() ?>
+				
 				<?php endwhile; ?>
 
 				<?php toolbox_content_nav( 'nav-below' ); ?>
