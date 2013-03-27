@@ -64,12 +64,20 @@
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #access -->
+		
+
 	<header id="branding" role="banner">
 	
 		<hgroup>
+		
 		<div class="logo">
 			<img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" style="width:300px;" class="shake" />
+			<div style="width: 290px; float: right; margin: auto;" class="search">
+		<?php get_search_form( 1 ); ?>
+			</div>
 		</div>
+		
+		
 		</hgroup>
 	</header><!-- #branding -->
 

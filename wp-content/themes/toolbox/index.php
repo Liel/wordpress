@@ -25,6 +25,7 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post();
 				$id = get_the_ID();
 				?>
+				<div class="post">
 				<div class="get_post">
 				
 				<a class="shake" href="?p=<?php echo $id ?>">
@@ -33,10 +34,12 @@ get_header(); ?>
 				<span class="meta">
 				<?php 
 				echo "by ".get_the_author().", ";
-				echo the_date(); ?>
+				echo the_date()." // ";
+			 comments_number( ' no comments', 'one comment', '% comments' ); 
+				?>
 				</span></div>
 				<?php echo the_content() ?>
-				
+				</div>
 				<?php endwhile; ?>
 
 				<?php toolbox_content_nav( 'nav-below' ); ?>
